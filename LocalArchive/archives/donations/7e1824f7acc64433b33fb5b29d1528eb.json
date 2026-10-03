@@ -1,0 +1,29 @@
+{
+  "archiveId": "7e1824f7-acc6-4433-b33f-b5b29d1528eb",
+  "sequenceNumber": 1,
+  "previousHash": "GENESIS",
+  "payloadHash": "f6953ed027020041842058b2c166c4f0b8c2f3231feeee9bffe3a29093fe205e",
+  "currentHash": "eec6af418e379eb73c62dc1637124e56192dde043b9f61a17dcb47cb15082713",
+  "recordCount": 3,
+  "createdAt": "2026-10-03T08:32:18.498988+00:00",
+  "donations": [
+    {
+      "id": 3,
+      "username": "Ali",
+      "donationMoney": 25.00,
+      "donationDate": "2026-09-23T11:51:45.197545+00:00"
+    },
+    {
+      "id": 4,
+      "username": "Sara",
+      "donationMoney": 75.00,
+      "donationDate": "2026-09-16T11:51:45.197545+00:00"
+    },
+    {
+      "id": 5,
+      "username": "Khaled",
+      "donationMoney": 30.00,
+      "donationDate": "2026-09-11T11:51:45.197545+00:00"
+    }
+  ]
+}

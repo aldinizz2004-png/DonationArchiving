@@ -1,0 +1,17 @@
+{
+  "archiveId": "dfbaaba7-f4a5-4fcc-aeee-3b160e46c98b",
+  "sequenceNumber": 2,
+  "previousHash": "eec6af418e379eb73c62dc1637124e56192dde043b9f61a17dcb47cb15082713",
+  "payloadHash": "a33e1e9f72f6415ec466c9f96c28714a91aa6e0bd3592c0cbcbbe57752114d54",
+  "currentHash": "101b78bc9cf669cf77c106d3c8ec626b5a9612b25cb103ca6cfae7367889a9a5",
+  "recordCount": 1,
+  "createdAt": "2026-10-03T08:46:18.096651+00:00",
+  "donations": [
+    {
+      "id": 7,
+      "username": "azooz",
+      "donationMoney": 1000.00,
+      "donationDate": "2026-09-19T21:00:00+00:00"
+    }
+  ]
+}

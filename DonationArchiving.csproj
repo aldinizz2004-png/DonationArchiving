@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>8a8dfd3c-363d-422d-be01-cae7139061c1</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.89" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="10.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.12" />
+    <PackageReference Include="Npgsql" Version="10.0.3" />
+  </ItemGroup>
+
+</Project>

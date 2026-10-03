@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "/Ycl6ND5AHQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Asus i7\\Desktop\\DonationArchiving\\DonationArchiving.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Asus i7\\.nuget\\packages\\dapper\\2.1.89\\dapper.2.1.89.nupkg.sha512",
+    "C:\\Users\\Asus i7\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.12\\microsoft.extensions.configuration.10.0.12.nupkg.sha512",
+    "C:\\Users\\Asus i7\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.12\\microsoft.extensions.configuration.abstractions.10.0.12.nupkg.sha512",
+    "C:\\Users\\Asus i7\\.nuget\\packages\\microsoft.extensions.configuration.environmentvariables\\10.0.12\\microsoft.extensions.configuration.environmentvariables.10.0.12.nupkg.sha512",
+    "C:\\Users\\Asus i7\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\10.0.12\\microsoft.extensions.configuration.fileextensions.10.0.12.nupkg.sha512",
+    "C:\\Users\\Asus i7\\.nuget\\packages\\microsoft.extensions.configuration.json\\10.0.12\\microsoft.extensions.configuration.json.10.0.12.nupkg.sha512",
+    "C:\\Users\\Asus i7\\.nuget\\packages\\microsoft.extensions.configuration.usersecrets\\10.0.12\\microsoft.extensions.configuration.usersecrets.10.0.12.nupkg.sha512",
+    "C:\\Users\\Asus i7\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.0\\microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512",
+    "C:\\Users\\Asus i7\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\10.0.12\\microsoft.extensions.fileproviders.abstractions.10.0.12.nupkg.sha512",
+    "C:\\Users\\Asus i7\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\10.0.12\\microsoft.extensions.fileproviders.physical.10.0.12.nupkg.sha512",
+    "C:\\Users\\Asus i7\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\10.0.12\\microsoft.extensions.filesystemglobbing.10.0.12.nupkg.sha512",
+    "C:\\Users\\Asus i7\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.0\\microsoft.extensions.logging.abstractions.10.0.0.nupkg.sha512",
+    "C:\\Users\\Asus i7\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.12\\microsoft.extensions.primitives.10.0.12.nupkg.sha512",
+    "C:\\Users\\Asus i7\\.nuget\\packages\\npgsql\\10.0.3\\npgsql.10.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
