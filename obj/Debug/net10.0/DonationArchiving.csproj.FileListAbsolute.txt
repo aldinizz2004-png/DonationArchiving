@@ -28,3 +28,6 @@ C:\Users\Asus i7\Desktop\DonationArchiving\bin\Debug\net10.0\Microsoft.Extension
 C:\Users\Asus i7\Desktop\DonationArchiving\bin\Debug\net10.0\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\Asus i7\Desktop\DonationArchiving\bin\Debug\net10.0\Npgsql.dll
 C:\Users\Asus i7\Desktop\DonationArchiving\bin\Debug\net10.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\Asus i7\Desktop\DonationArchiving\bin\Debug\net10.0\AWSSDK.Core.dll
+C:\Users\Asus i7\Desktop\DonationArchiving\bin\Debug\net10.0\AWSSDK.S3.dll
+C:\Users\Asus i7\Desktop\DonationArchiving\obj\Debug\net10.0\DonationArchiving.sourcelink.json

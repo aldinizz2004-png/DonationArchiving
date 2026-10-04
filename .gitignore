@@ -1,0 +1,9 @@
+bin/
+obj/
+publish/
+.env
+logs/*
+!logs/.gitkeep
+LocalArchive/archives/donations/*.json
+!LocalArchive/archives/donations/.gitkeep
+

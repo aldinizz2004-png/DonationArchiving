@@ -2,6 +2,8 @@
 using DonationArchiving.Repositories;
 using DonationArchiving.Services;
 using DonationArchiving.Storage;
+using Amazon;
+using Amazon.S3;
 using Microsoft.Extensions.Configuration;
 
 
@@ -21,10 +23,11 @@ var connectionString =
 if (string.IsNullOrWhiteSpace(
         connectionString))
 {
-    Console.WriteLine(
+    Console.Error.WriteLine(
         "Database connection string not configured."
     );
 
+    Environment.ExitCode = 1;
     return;
 }
 
@@ -45,10 +48,40 @@ var simulateWriteFailure = bool.TryParse(
     out var shouldFail
 ) && shouldFail;
 
-var storage = new LocalArchiveStorage(
-    archiveRoot,
-    simulateWriteFailure
-);
+IArchiveStorage storage;
+
+var storageType = configuration["ARCHIVE_STORAGE"]?.Trim().ToLowerInvariant() ?? "local";
+
+if (storageType == "s3")
+{
+    var regionName = configuration["AWS_REGION"];
+    var bucketName = configuration["AWS_BUCKET_NAME"];
+
+    if (string.IsNullOrWhiteSpace(regionName) || string.IsNullOrWhiteSpace(bucketName))
+    {
+        Console.Error.WriteLine(
+            "AWS_REGION and AWS_BUCKET_NAME are required when ARCHIVE_STORAGE=s3."
+        );
+        Environment.ExitCode = 1;
+        return;
+    }
+
+    var s3Client = new AmazonS3Client(RegionEndpoint.GetBySystemName(regionName));
+    storage = new S3ArchiveStorage(s3Client, bucketName);
+}
+else if (storageType == "local")
+{
+    storage = new LocalArchiveStorage(
+        archiveRoot,
+        simulateWriteFailure
+    );
+}
+else
+{
+    Console.Error.WriteLine("ARCHIVE_STORAGE must be either 'local' or 's3'.");
+    Environment.ExitCode = 1;
+    return;
+}
 
 var archivingService = new ArchivingService(
     repository,
@@ -68,8 +101,13 @@ if (args.Length > 0)
 
     if (command == "archive")
     {
-        await archivingService
+        var succeeded = await archivingService
             .ArchiveOldDonationsAsync();
+
+        if (!succeeded)
+        {
+            Environment.ExitCode = 1;
+        }
 
         return;
     }
@@ -82,6 +120,11 @@ if (args.Length > 0)
 
         return;
     }
+
+
+    Console.Error.WriteLine($"Unknown command: {args[0]}");
+    Environment.ExitCode = 1;
+    return;
 }
 
 

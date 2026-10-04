@@ -11,7 +11,7 @@ public class ArchivingService
 {
     private readonly DonationRepository _repository;
 
-    private readonly LocalArchiveStorage _storage;
+    private readonly IArchiveStorage _storage;
 
 
     private static readonly JsonSerializerOptions JsonOptions =
@@ -36,7 +36,7 @@ public class ArchivingService
 
     public ArchivingService(
         DonationRepository repository,
-        LocalArchiveStorage storage)
+        IArchiveStorage storage)
     {
         _repository = repository;
 
@@ -44,7 +44,7 @@ public class ArchivingService
     }
 
 
-    public async Task ArchiveOldDonationsAsync()
+    public async Task<bool> ArchiveOldDonationsAsync()
     {
         ArchiveRecord? archive = null;
 
@@ -72,7 +72,7 @@ public class ArchivingService
                     "[ARCHIVE] No donations older than 7 days."
                 );
 
-                return;
+                return true;
             }
 
 
@@ -202,6 +202,14 @@ public class ArchivingService
             );
 
 
+            if (!await _storage.ExistsAsync(archive.ArchivePath))
+            {
+                throw new IOException(
+                    "Archive storage did not confirm that the object exists."
+                );
+            }
+
+
             // Never trust only the upload response.
             // Read it back and verify it.
             var storedJson =
@@ -233,7 +241,7 @@ public class ArchivingService
 
 
             Console.WriteLine(
-                "[ARCHIVE] Local archive verified successfully."
+                "[ARCHIVE] Stored archive verified successfully."
             );
 
 
@@ -258,6 +266,8 @@ public class ArchivingService
             Console.WriteLine(
                 $"[ARCHIVE] HASH: {currentHash}"
             );
+
+            return true;
         }
         catch (Exception ex)
         {
@@ -281,6 +291,8 @@ public class ArchivingService
                     // Do not hide original error.
                 }
             }
+
+            return false;
         }
     }
 

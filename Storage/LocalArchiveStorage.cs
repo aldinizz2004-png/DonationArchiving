@@ -1,6 +1,6 @@
 namespace DonationArchiving.Storage;
 
-public class LocalArchiveStorage
+public class LocalArchiveStorage : IArchiveStorage
 {
     private readonly string _rootPath;
     private readonly bool _simulateWriteFailure;
@@ -43,6 +43,11 @@ public class LocalArchiveStorage
         }
 
         return File.ReadAllTextAsync(fullPath);
+    }
+
+    public Task<bool> ExistsAsync(string relativePath)
+    {
+        return Task.FromResult(File.Exists(GetFullPath(relativePath)));
     }
 
     public string GetFullPath(string relativePath)

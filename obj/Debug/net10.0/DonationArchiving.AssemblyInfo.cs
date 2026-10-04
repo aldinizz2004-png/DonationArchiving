@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DonationArchiving")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd19ef8eddcf1c009cfa8c6e3ab809e67de7f0cd")]
 [assembly: System.Reflection.AssemblyProductAttribute("DonationArchiving")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DonationArchiving")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
